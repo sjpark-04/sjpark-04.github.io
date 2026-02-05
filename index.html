@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunjae Park · Engineering Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="#hero">Home</a>
+    <a href="#introduction">Introduction</a>
+    <a href="#humaster">Humaster</a>
+    <a href="#mechathon">Mechathon</a>
+    <a href="#imeche">IMechE</a>
+    <a href="#drone">Drone</a>
+    <a href="#pcb">PCB</a>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero">
+      <h1>Sunjae&nbsp;Park</h1>
+      <p class="tagline">Engineering Projects</p>
+    </section>
+
+    <section id="introduction" class="section introduction-section">
+      <div class="intro-inner">
+        <h2>Introduction</h2>
+        <ul class="intro-list">
+          <li><strong>Education:</strong> UCL MEng Mechanical Engineering predicted First Class Honours</li>
+          <li><strong>Skills:</strong> CAD (Autodesk Fusion 360, SolidWorks), PCB Design (KiCAD), Electrical Wiring, Machining</li>
+          <li><strong>Languages:</strong> Python (MicroPython, pySerial, PyModbus, PySide6, PyQt6, PyQtGraph), C/C++, MATLAB</li>
+          <li><strong>Developer Tools:</strong> VS Code, PyCharm, Arduino IDE</li>
+        </ul>
+        <p class="intro-spacer"></p>
+        <p class="intro-tagline">Here's my work focusing on turning first-principles theory into real-life projects.</p>
+      </div>
+    </section>
+
+    <section id="humaster" class="section">
+      <h2>Humaster</h2>
+      <p class="about-text">Add your Humaster project description and details here.</p>
+    </section>
+
+    <section id="mechathon" class="section">
+      <h2>Mechathon</h2>
+      <p class="about-text">Add your Mechathon project description and details here.</p>
+    </section>
+
+    <section id="imeche" class="section">
+      <h2>IMechE</h2>
+      <p class="about-text">Add your IMechE project description and details here.</p>
+    </section>
+
+    <section id="drone" class="section">
+      <h2>Drone</h2>
+      <p class="about-text">Add your Drone project description and details here.</p>
+    </section>
+
+    <section id="pcb" class="section">
+      <h2>PCB</h2>
+      <p class="about-text">Add your PCB project description and details here.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> · Mechanical Engineering Portfolio</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
