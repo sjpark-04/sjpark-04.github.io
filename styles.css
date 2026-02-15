@@ -36,7 +36,9 @@ body {
 
 /* Sections — consistent spacing, easy to skim, wider content */
 main { max-width: 960px; margin: 0 auto; padding: 0 2rem 4rem; }
-.section { padding: 3rem 0; border-bottom: 1px solid #e5e2dc; }
+.section { padding: 3rem 0; border-bottom: 1px solid #e5e2dc; scroll-margin-top: 4rem; }
+.hero { scroll-margin-top: 4rem; }
+.introduction-section { scroll-margin-top: 4rem; }
 .section:last-of-type { border-bottom: none; }
 
 h2 {

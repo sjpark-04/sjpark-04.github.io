@@ -15,6 +15,7 @@
     <a href="#introduction">Introduction</a>
     <a href="#humaster">Humaster</a>
     <a href="#mechathon">Mechathon</a>
+    <a href="#uclr">UCLR</a>
     <a href="#imeche">IMechE</a>
     <a href="#drone">Drone</a>
     <a href="#pcb">PCB</a>
@@ -42,45 +43,80 @@
 
     <section id="humaster" class="section">
       <h2>Humaster</h2>
-      <p class="section-intro">During my Summer 2025 internship at Humaster, I supported senior engineers across multiple engineering initiatives, contributing to technical tasks, problem-solving, and project execution. The projects below highlight the key work I was involved in during this placement.</p>
+      <p class="section-intro">During my Summer 2025 internship at Humaster, I supported senior engineers across multiple projects, contributing to technical problem-solving and project execution. The work below highlights key initiatives I was involved in during this placement.</p>
 
       <h3 class="subsection-title">Automatic Humidity Controller</h3>
-      <p class="about-text">One project required a controlled temperature–humidity environment for laboratory experiments. With commercial environmental chambers exceeding the budget, I took the initiative to design and build an automated humidity control system integrated with heated storage, delivering a cost-effective in-house solution that met the experimental requirements.</p>
+      <p class="about-text">One project required a controlled temperature-humidity environment for laboratory experiments. With commercial environmental chambers exceeding budget, I designed and built an automated humidity control system integrated with heated storage, delivering a cost-effective solution that met experimental requirements.</p>
       <ul class="subsection-list">
-        <li>Integrated a microcontroller-based humidity control system built around an Arduino platform with RS-485 communication via a MAX485 transceiver, incorporating a digital temperature–humidity sensor, relay-actuated humidifier control, and an LCD touch interface. The hardware architecture was assembled using PCB terminal blocks, structured wiring, insulation, and heat-shrink protection to ensure reliable electrical connections and maintainability.</li>
-        <li>Developed the embedded control logic in MicroPython within the Arduino environment, implementing a threshold-based on–off control algorithm that continuously compared measured humidity against the setpoint and autonomously regulated humidifier power, achieving stable environmental control for laboratory operation.</li>
+        <li>Designed a microcontroller-based humidity regulation system using an Arduino platform communicating with a digital temperature-humidity sensor through MAX485 transceiver, relay-controlled humidifier, and LCD touchscreen interface. Assembled the hardware using PCB terminal blocks with structured wiring, insulation, and heat-shrink protection to ensure reliable connections and system maintainability.</li>
+        <li>Developed embedded control logic in MicroPython, implementing a threshold-based on-off control algorithm that continuously monitored humidity levels and autonomously regulated humidifier operation to maintain stable environmental conditions for laboratory use.</li>
       </ul>
-      <p class="about-text">The system was validated in heated storage trials, where the user-defined humidity setpoint—configured via the LCD touchscreen interface—was maintained within ±5% RH of target, satisfying the original performance specification. During low-temperature testing (40–60 °C), transient overshoot characteristic of bang–bang control was observed; however, under the actual operating condition (>80 °C), the thermal environment inherently damped the response, eliminating the instability without requiring further control tuning.</p>
+      <p class="about-text">The system successfully maintained user-defined humidity setpoints within ±5% RH during heated storage validation, meeting performance specifications. Low-temperature testing (40–60°C) revealed transient overshoot typical of bang-bang control; however, under actual operating conditions (>80°C), the thermal environment naturally dampened the response, eliminating instability without requiring additional control tuning.</p>
       <p class="about-text key-skills"><strong>Key Skills:</strong> Arduino IDE, MicroPython programming, Electrical Wiring, Serial Communications</p>
 
       <h3 class="subsection-title">Hioki Data logger program</h3>
-      <p class="about-text">During my internship, I worked with a Hioki data logger used to measure multiple physical properties simultaneously. The device stored all data locally and could only be operated manually through physical buttons, which limited efficiency and accessibility. To overcome these limitations, I developed a USB-based program featuring remote device control, real-time graph visualization, and automatic data transfer to a laptop.</p>
+      <p class="about-text">During my internship, I worked with a Hioki data logger that measured multiple physical properties simultaneously but had significant limitations: all data was stored locally, and the device could only be controlled manually through physical buttons. I developed a USB-based program that enabled remote control, real-time visualization, and automatic data transfer to address these constraints.</p>
       <ul class="subsection-list">
-        <li>Developed a Python-based application leveraging PyQt6 and PyQtGraph to create a custom GUI with real-time graphing capabilities and implemented PySerial for serial communication to transmit commands and receive measurement data from the device.</li>
-        <li>Integrated the manufacturer's complete command protocol, allowing users to remotely start/stop measurements and modify all device settings.</li>
+        <li>Developed a Python application using PyQt6 and PyQtGraph for the custom GUI and real-time graphing capabilities, with PySerial enabling bidirectional serial communication for command transmission and data acquisition.</li>
+        <li>Implemented the manufacturer's complete command protocol to enable full remote control of measurement operations and device configuration.</li>
       </ul>
-      <p class="about-text">Delivered a fully functional application that streamlines the entire measurement workflow: remotely configuring device settings, initiating measurements with automatic real-time plotting, and stopping measurements with automatic Excel export to the laptop. This solution reduced working time by 60%, significantly accelerating data analysis and reporting.</p>
+      <p class="about-text">The application successfully automated the entire workflow—from remote device configuration and real-time plotting to automatic Excel export upon measurement completion. This solution achieved a 60% reduction in working time, significantly improving data analysis and reporting efficiency.</p>
       <p class="about-text key-skills"><strong>Key Skills:</strong> Python (pySerial, PyQt6, PyQtGraph), Serial communications</p>
     </section>
 
     <section id="mechathon" class="section">
       <h2>Mechathon</h2>
-      <p class="about-text">Add your Mechathon project description and details here.</p>
+      <p class="section-intro">In January 2026, I participated in MES Mechathon, an Autodesk-powered engineering challenge where teams design and manufacture solutions within three days. The competition develops rapid prototyping skills, creative problem-solving, and teamwork under tight deadlines. This year's challenge: build a water-powered wheeled device that travels the furthest distance possible using only water propulsion.</p>
+      <ul class="subsection-list">
+        <li>Engineered a vehicle with a 0.8 m water column and designed a low-profile frame to stabilize the elevated center of mass while meeting strict dimensional constraints. The design balanced structural integrity with weight distribution to prevent tipping during operation.</li>
+        <li>Developed a custom 3D-printed nozzle using CAD, optimized for compatibility with PVC water columns. Created a MATLAB program to calculate optimal nozzle inlet/outlet dimensions and water head height by predicting maximum travel distance and acceleration across varying parameter configurations.</li>
+      </ul>
+      <p class="about-text">Our team successfully built a water-propelled vehicle that traveled nearly 3 meters down the track. While the propulsion system performed well, the device stopped prematurely when the axle—which extended too far—collided with the track boundaries. This highlighted an important lesson: potential failure points must be identified and mitigated earlier in the design phase to ensure reliable performance under competition conditions.</p>
+      <p class="about-text key-skills"><strong>Key Skills:</strong> CAD Design (Fusion 360), MATLAB programming, manual dexterity, creativity, critical thinking, problem solving, pressure handling, teamwork</p>
+    </section>
+
+    <section id="uclr" class="section">
+      <h2>UCLR (University College London Racing)</h2>
+      <p class="section-intro">During my first year at UCL, I joined the UCLR Rover team as a design engineer. My role centered on redesigning and improving existing rover components to boost overall performance and efficiency.</p>
+      <ul class="subsection-list">
+        <li>Reduced rover wheel mass by 15.7% by redesigning the inflatable tire as a 3D-printable airless tire, validated through FEA simulations to meet full-load structural requirements.</li>
+        <li>Designed rail-mounted battery enclosures tailored to the redesigned rover frame, enhancing power system protection and reliability in harsh operating conditions.</li>
+        <li>Created a new sponsorship brochure featuring simplified design elements and Mars-themed visual identity to improve the team's sponsorship outreach and brand presentation.</li>
+      </ul>
+      <p class="about-text key-skills"><strong>Key Skills:</strong> CAD design (Fusion 360), Canva, teamwork</p>
     </section>
 
     <section id="imeche" class="section">
       <h2>IMechE</h2>
-      <p class="about-text">Add your IMechE project description and details here.</p>
+      <p class="section-intro">In my first year of university, I participated in the 2023 IMechE Design Challenge. The task was to design and build an internal pipe climber that ascends a vertical pipe, reverses at the top, and stops at its starting position - all within a strict £50 budget.</p>
+      <ul class="subsection-list">
+        <li>Created detailed CAD models for design validation and feasibility analysis before proceeding to manufacturing.</li>
+        <li>Built the complete device per design specifications, procuring all necessary components and tools while adhering to the £50 budget limit.</li>
+      </ul>
+      <p class="about-text">Our team successfully fabricated a device that matched the CAD design specifications. However, functionality issues emerged during testing - the climber failed to ascend due to dimensional mismatch between the pipe diameter and climber width. This highlighted the need for more rigorous physical prototyping and dimensional validation beyond CAD modeling to ensure real-world performance.</p>
+      <p class="about-text key-skills"><strong>Key Skills:</strong> CAD design (Fusion 360), problem-solving, teamwork, management</p>
     </section>
 
     <section id="drone" class="section">
       <h2>Drone</h2>
-      <p class="about-text">Add your Drone project description and details here.</p>
+      <p class="section-intro">I competed in the December 2025 Drone Sim Challenge, hosted by Royal Holloway's Robotics & AI Society. Teams had to develop an autonomous drone controller capable of identifying all targets, logging their coordinates within a 3D Webots arena, and navigating obstacle-free - all while minimizing completion time.</p>
+      <ul class="subsection-list">
+        <li>Implemented PID control algorithms in C to stabilize drone flight dynamics and improve maneuverability.</li>
+        <li>Developed RGB color-based object detection using thresholding techniques in C to accurately identify all target objects.</li>
+      </ul>
+      <p class="about-text">Our team placed 1st in the competition by demonstrating the most stable drone flight control among all participants, successfully detecting 2 out of 3 targets with accurate coordinate logging. While we missed one target, the superior flight stability and control precision proved decisive in securing the win.</p>
+      <p class="about-text key-skills"><strong>Key Skills:</strong> C programming, control systems, problem-solving, teamwork</p>
     </section>
 
     <section id="pcb" class="section">
       <h2>PCB</h2>
-      <p class="about-text">Add your PCB project description and details here.</p>
+      <p class="section-intro">In January 2026, I participated in a PCB design workshop where I learned to design custom circuit boards using KiCAD and fabricate physical PCBs.</p>
+      <ul class="subsection-list">
+        <li>Learned to design circuit layouts in KiCAD, assign component specifications (voltage, resistance, capacitance), and select appropriate hardware for PCB implementation.</li>
+        <li>Developed PCB schematics by converting circuit layout created in KiCAD into manufacturing-ready layouts using DipTrace for fabrication.</li>
+        <li>Visited UCL's laboratory facilities to observe industrial PCB manufacturing processes and equipment firsthand.</li>
+      </ul>
+      <p class="about-text key-skills"><strong>Key Skills:</strong> KiCAD, DipTrace</p>
     </section>
   </main>
 
