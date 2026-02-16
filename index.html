@@ -47,15 +47,47 @@
 
       <h3 class="subsection-title">Automatic Humidity Controller</h3>
       <p class="about-text">One project required a controlled temperature-humidity environment for laboratory experiments. With commercial environmental chambers exceeding budget, I designed and built an automated humidity control system integrated with heated storage, delivering a cost-effective solution that met experimental requirements.</p>
+      <div class="pcb-images">
+        <figure class="pcb-image-figure">
+          <img src="pictures/final_lcd.jpg" alt="Control panel">
+          <figcaption>Control panel</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/lcd_display.jpg" alt="Device menu">
+          <figcaption>Device menu</figcaption>
+        </figure>
+      </div>
       <ul class="subsection-list">
-        <li>Designed a microcontroller-based humidity regulation system using an Arduino platform communicating with a digital temperature-humidity sensor through MAX485 transceiver, relay-controlled humidifier, and LCD touchscreen interface. Assembled the hardware using PCB terminal blocks with structured wiring, insulation, and heat-shrink protection to ensure reliable connections and system maintainability.</li>
         <li>Developed embedded control logic in MicroPython, implementing a threshold-based on-off control algorithm that continuously monitored humidity levels and autonomously regulated humidifier operation to maintain stable environmental conditions for laboratory use.</li>
+        <li>Designed a microcontroller-based humidity regulation system using an Arduino platform communicating with a digital temperature-humidity sensor through MAX485 transceiver, relay-controlled humidifier, and LCD touchscreen interface. Assembled the hardware using PCB terminal blocks with structured wiring, insulation, and heat-shrink protection to ensure reliable connections and system maintainability.</li>
       </ul>
+      <div class="pcb-images pcb-images-three">
+        <figure class="pcb-image-figure">
+          <img src="pictures/max485.jpg" alt="MAX485">
+          <figcaption>MAX485</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/relay_switch2.jpg" alt="Relay switch">
+          <figcaption>Relay switch</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/sensor.jpg" alt="Temperature-humidity sensor">
+          <figcaption>Temperature-humidity sensor</figcaption>
+        </figure>
+      </div>
       <p class="about-text">The system successfully maintained user-defined humidity setpoints within ±5% RH during heated storage validation, meeting performance specifications. Low-temperature testing (40–60°C) revealed transient overshoot typical of bang-bang control; however, under actual operating conditions (>80°C), the thermal environment naturally dampened the response, eliminating instability without requiring additional control tuning.</p>
+      <figure class="section-image">
+        <img src="pictures/humidifier_circuit.jpg" alt="Device schematic">
+        <figcaption>Device schematic</figcaption>
+      </figure>
       <p class="about-text key-skills"><strong>Key Skills:</strong> Arduino IDE, MicroPython programming, Electrical Wiring, Serial Communications</p>
 
       <h3 class="subsection-title">Hioki Data logger program</h3>
       <p class="about-text">During my internship, I worked with a Hioki data logger that measured multiple physical properties simultaneously but had significant limitations: all data was stored locally, and the device could only be controlled manually through physical buttons. I developed a USB-based program that enabled remote control, real-time visualization, and automatic data transfer to address these constraints.</p>
+      <figure class="section-image section-image-small">
+        <img src="pictures/hioki.jpg" alt="Hioki Data-logger">
+        <figcaption>Hioki Data-logger</figcaption>
+      </figure>
       <ul class="subsection-list">
         <li>Developed a Python application using PyQt6 and PyQtGraph for the custom GUI and real-time graphing capabilities, with PySerial enabling bidirectional serial communication for command transmission and data acquisition.</li>
         <li>Implemented the manufacturer's complete command protocol to enable full remote control of measurement operations and device configuration.</li>
@@ -67,11 +99,38 @@
     <section id="mechathon" class="section">
       <h2>Mechathon</h2>
       <p class="section-intro">In January 2026, I participated in MES Mechathon, an Autodesk-powered engineering challenge where teams design and manufacture solutions within three days. The competition develops rapid prototyping skills, creative problem-solving, and teamwork under tight deadlines. This year's challenge: build a water-powered wheeled device that travels the furthest distance possible using only water propulsion.</p>
-      <ul class="subsection-list">
+      <div class="pcb-images">
+        <figure class="pcb-image-figure">
+          <img src="pictures/water_car5.jpg" alt="Water-powered vehicle" class="image-contain">
+          <figcaption>Water-powered vehicle</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/mechathon_cad.jpg" alt="CAD model of water-powered vehicle" class="image-contain">
+          <figcaption>CAD model of water-powered vehicle</figcaption>
+        </figure>
+      </div>
+      <ul class="subsection-list subsection-list-tight-after">
         <li>Engineered a vehicle with a 0.8 m water column and designed a low-profile frame to stabilize the elevated center of mass while meeting strict dimensional constraints. The design balanced structural integrity with weight distribution to prevent tipping during operation.</li>
         <li>Developed a custom 3D-printed nozzle using CAD, optimized for compatibility with PVC water columns. Created a MATLAB program to calculate optimal nozzle inlet/outlet dimensions and water head height by predicting maximum travel distance and acceleration across varying parameter configurations.</li>
       </ul>
+      <div class="pcb-images pcb-images-mechathon-pair">
+        <figure class="pcb-image-figure pcb-image-graph-large">
+          <img src="pictures/mechathon_graph.png" alt="Distance (solid) and acceleration (dashed) v.s time graph with varying outlet diameter" class="image-contain">
+          <figcaption>Distance (solid) and acceleration (dashed) v.s time graph with varying outlet diameter</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/nozzle_CAD.jpg" alt="3D printable nozzle CAD">
+          <figcaption>3D printable nozzle CAD</figcaption>
+        </figure>
+      </div>
       <p class="about-text">Our team successfully built a water-propelled vehicle that traveled nearly 3 meters down the track. While the propulsion system performed well, the device stopped prematurely when the axle—which extended too far—collided with the track boundaries. This highlighted an important lesson: potential failure points must be identified and mitigated earlier in the design phase to ensure reliable performance under competition conditions.</p>
+      <figure class="section-video">
+        <video id="mechathon-vid" controls preload="metadata" class="mechathon-video">
+          <source src="pictures/mechathon_vid.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Mechathon final run video</figcaption>
+      </figure>
       <p class="about-text key-skills"><strong>Key Skills:</strong> CAD Design (Fusion 360), MATLAB programming, manual dexterity, creativity, critical thinking, problem solving, pressure handling, teamwork</p>
     </section>
 
@@ -89,6 +148,16 @@
     <section id="imeche" class="section">
       <h2>IMechE</h2>
       <p class="section-intro">In my first year of university, I participated in the 2023 IMechE Design Challenge. The task was to design and build an internal pipe climber that ascends a vertical pipe, reverses at the top, and stops at its starting position - all within a strict £50 budget.</p>
+      <div class="pcb-images">
+        <figure class="pcb-image-figure">
+          <img src="pictures/imeche.jpg" alt="Pipe climber">
+          <figcaption>Pipe climber</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/imeche_CAD.jpg" alt="Pipe climber CAD model" class="image-contain">
+          <figcaption>Pipe climber CAD model</figcaption>
+        </figure>
+      </div>
       <ul class="subsection-list">
         <li>Created detailed CAD models for design validation and feasibility analysis before proceeding to manufacturing.</li>
         <li>Built the complete device per design specifications, procuring all necessary components and tools while adhering to the £50 budget limit.</li>
@@ -100,6 +169,10 @@
     <section id="drone" class="section">
       <h2>Drone</h2>
       <p class="section-intro">I competed in the December 2025 Drone Sim Challenge, hosted by Royal Holloway's Robotics & AI Society. Teams had to develop an autonomous drone controller capable of identifying all targets, logging their coordinates within a 3D Webots arena, and navigating obstacle-free - all while minimizing completion time.</p>
+      <figure class="section-image">
+        <img src="pictures/drone.jpg" alt="Drone">
+        <figcaption>Developing drone controller within Webots simulator</figcaption>
+      </figure>
       <ul class="subsection-list">
         <li>Implemented PID control algorithms in C to stabilize drone flight dynamics and improve maneuverability.</li>
         <li>Developed RGB color-based object detection using thresholding techniques in C to accurately identify all target objects.</li>
@@ -113,9 +186,31 @@
       <p class="section-intro">In January 2026, I participated in a PCB design workshop where I learned to design custom circuit boards using KiCAD and fabricate physical PCBs.</p>
       <ul class="subsection-list">
         <li>Learned to design circuit layouts in KiCAD, assign component specifications (voltage, resistance, capacitance), and select appropriate hardware for PCB implementation.</li>
-        <li>Developed PCB schematics by converting circuit layout created in KiCAD into manufacturing-ready layouts using DipTrace for fabrication.</li>
+      </ul>
+      <div class="pcb-images">
+        <figure class="pcb-image-figure">
+          <img src="pictures/kicad.jpg" alt="Circuit designed using KiCAD">
+          <figcaption>Circuit designed using KiCAD</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/diptrace.jpg" alt="PCB layout configured using KiCAD">
+          <figcaption>PCB layout configured using KiCAD</figcaption>
+        </figure>
+      </div>
+      <ul class="subsection-list subsection-list-continue">
+        <li>Printed a PCB by converting circuit layout created in KiCAD into manufacturing-ready file using DipTrace for fabrication.</li>
         <li>Visited UCL's laboratory facilities to observe industrial PCB manufacturing processes and equipment firsthand.</li>
       </ul>
+      <div class="pcb-images">
+        <figure class="pcb-image-figure">
+          <img src="pictures/PCB_front.jpg" alt="PCB (front)">
+          <figcaption>PCB (front)</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/PCB_back.jpg" alt="PCB (back)">
+          <figcaption>PCB (back)</figcaption>
+        </figure>
+      </div>
       <p class="about-text key-skills"><strong>Key Skills:</strong> KiCAD, DipTrace</p>
     </section>
   </main>
@@ -126,6 +221,16 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    var mechathonVid = document.getElementById('mechathon-vid');
+    if (mechathonVid) {
+      mechathonVid.addEventListener('loadedmetadata', function() { mechathonVid.currentTime = 55; });
+      mechathonVid.addEventListener('timeupdate', function() {
+        if (mechathonVid.currentTime >= 61) mechathonVid.pause();
+      });
+      mechathonVid.addEventListener('play', function() {
+        if (mechathonVid.currentTime < 55 || mechathonVid.currentTime > 61) mechathonVid.currentTime = 55;
+      });
+    }
   </script>
 </body>
 </html>

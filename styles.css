@@ -78,7 +78,12 @@ h3 { font-size: 1.1rem; font-weight: 600; margin: 0; color: #1a1a1a; }
 }
 .subsection-list li { margin-bottom: 0.75rem; }
 .subsection-list li:last-child { margin-bottom: 0; }
+.subsection-list-tight-after { margin-bottom: 3.5rem; }
+.subsection-list-continue { margin-top: 0.5rem; }
 .key-skills { margin-top: 9rem; padding-top: 1.5rem; }
+.section-video { margin: 2rem 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.section-video .mechathon-video { width: 100%; max-width: 720px; max-height: 70vh; display: block; border-radius: 4px; object-fit: contain; }
+.section-video figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: #555; }
 .section-intro { margin: 0 0 1.25rem; max-width: none; color: #333; line-height: 1.6; }
 #humaster .section-intro {
   font-size: 1.2rem;
@@ -251,6 +256,96 @@ h3 { font-size: 1.1rem; font-weight: 600; margin: 0; color: #1a1a1a; }
   font-weight: 500;
 }
 .contact-links a:hover { text-decoration: underline; }
+
+/* Section images (drone, etc.) */
+.section-image {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-image img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #e5e2dc;
+}
+.section-image-small img {
+  max-width: 400px;
+}
+.section-image figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* PCB section images */
+.pcb-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 2rem 0;
+  justify-content: flex-start;
+}
+.pcb-image-figure {
+  margin: 0;
+  flex: 1 1 min(280px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pcb-image-figure img {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e5e2dc;
+}
+.pcb-image-figure img.image-contain {
+  object-fit: contain;
+  border: none;
+}
+.pcb-images-mechathon-pair {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  margin: 3.5rem 0 2rem 0;
+}
+.pcb-images-mechathon-pair .pcb-image-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pcb-images-mechathon-pair .pcb-image-figure img {
+  height: auto;
+  object-fit: contain;
+  width: auto;
+  max-width: 520px;
+  max-height: 380px;
+}
+.pcb-images-mechathon-pair .pcb-image-figure:first-child img {
+  max-width: 520px;
+}
+.pcb-images-mechathon-pair .pcb-image-figure:last-child img {
+  max-width: 260px;
+  object-fit: contain;
+  border: none;
+}
+.pcb-images-mechathon-pair .pcb-image-figure figcaption {
+  margin: 0.15rem 0 0;
+  padding: 0;
+}
+.pcb-image-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
 
 /* Footer */
 .footer {
