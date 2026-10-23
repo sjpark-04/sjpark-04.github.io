@@ -82,15 +82,17 @@ h3 { font-size: 1.1rem; font-weight: 600; margin: 0; color: #1a1a1a; }
 .subsection-list-continue { margin-top: 0.5rem; }
 .key-skills { margin-top: 9rem; padding-top: 1.5rem; }
 .section-video { margin: 2rem 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
-.section-video .mechathon-video { width: 100%; max-width: 720px; max-height: 70vh; display: block; border-radius: 4px; object-fit: contain; }
+.section-video .mechathon-video { width: 100%; max-width: min(720px, 100%); max-height: min(50vh, 420px); height: auto; display: block; border-radius: 4px; object-fit: contain; }
 .section-video figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: #555; }
 
-/* Side project video grid — 2×2, even spacing */
+/* Side project video grid — constrained so clips stay on-screen */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem 1rem;
   margin: 1.5rem 0 2rem;
+  width: 100%;
+  max-width: 100%;
 }
 .video-grid-item {
   margin: 0;
@@ -98,11 +100,14 @@ h3 { font-size: 1.1rem; font-weight: 600; margin: 0; color: #1a1a1a; }
   flex-direction: column;
   align-items: center;
   min-width: 0;
+  max-width: 100%;
 }
 .video-grid-item video {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  height: auto;
+  max-height: min(36vh, 260px);
   object-fit: contain;
   background: #ebe8e2;
   border-radius: 4px;
@@ -114,19 +119,27 @@ h3 { font-size: 1.1rem; font-weight: 600; margin: 0; color: #1a1a1a; }
   color: #555;
   text-align: center;
   line-height: 1.3;
+  max-width: 100%;
 }
 .video-grid-three {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.video-grid-three .video-grid-item video {
+  max-height: min(32vh, 220px);
 }
 @media (max-width: 700px) {
   .video-grid-three {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 @media (max-width: 600px) {
   .video-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
+  }
+  .video-grid-item video,
+  .video-grid-three .video-grid-item video {
+    max-height: min(40vh, 280px);
   }
 }
 .section-intro { margin: 0 0 1.25rem; max-width: none; color: #333; line-height: 1.6; }
