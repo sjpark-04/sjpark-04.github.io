@@ -13,6 +13,8 @@
   <nav class="nav">
     <a href="#hero">Home</a>
     <a href="#introduction">Introduction</a>
+    <a href="#surgical-robots">Surgical Robots</a>
+    <a href="#side-projects">Side Projects</a>
     <a href="#humaster">Humaster</a>
     <a href="#mechathon">Mechathon</a>
     <a href="#uclr">UCLR</a>
@@ -39,6 +41,81 @@
         <p class="intro-spacer"></p>
         <p class="intro-tagline">Here's my work focusing on turning first-principles theory into real-life projects.</p>
       </div>
+    </section>
+
+    <section id="surgical-robots" class="section">
+      <h2>Surgical robots driven by purely mechanical Actuators (In progress)</h2>
+      <p class="section-intro">Developing a purely mechanical surgical robot for laparoscopic surgery. The surgeon’s hand motion drives the instrument through hydraulic and pneumatic lines alone, with no electronics. This offers low cost for wider accessibility, intuitive control and natural force feedback, with potential for MRI compatibility when built from non-magnetic materials.</p>
+    </section>
+
+    <section id="side-projects" class="section">
+      <h2>Side Projects</h2>
+      <p class="section-intro">This is a self-directed project in which I'm building robotics skills from beginner to advanced level. I design robots across several domains, including legged walkers, soft grippers, swimmers and fliers, and test each design in physics simulation before moving to low-cost hardware. The work runs in three phases: foundations in electronics, kinematics and simulation; starter rigid and soft robot builds; and advanced multi-robot and hybrid systems.</p>
+
+      <h3 class="subsection-title">Phase 1 - Fundamentals</h3>
+      <div class="video-grid">
+        <figure class="video-grid-item">
+          <video controls preload="metadata" playsinline>
+            <source src="pictures/pot_servo_control.mp4" type="video/mp4">
+          </video>
+          <figcaption>Controlling servo through a potentiometer</figcaption>
+        </figure>
+        <figure class="video-grid-item">
+          <video controls preload="metadata" playsinline>
+            <source src="pictures/servo_control.mp4" type="video/mp4">
+          </video>
+          <figcaption>Turning servos to designated angles</figcaption>
+        </figure>
+        <figure class="video-grid-item">
+          <video controls preload="metadata" playsinline>
+            <source src="pictures/servo_control_2.mp4" type="video/mp4">
+          </video>
+          <figcaption>Turning servos to angles calculated from inverse kinematics using Python</figcaption>
+        </figure>
+        <figure class="video-grid-item">
+          <video controls preload="metadata" playsinline>
+            <source src="pictures/simultaneous_task.mp4" type="video/mp4">
+          </video>
+          <figcaption>Performing tasks simultaneously using millis() function</figcaption>
+        </figure>
+      </div>
+      <ul class="subsection-list">
+        <li>Learned core Arduino I/O from scratch: digital buttons, analog sensors, PWM and servo control.</li>
+        <li>Built a real-time loop where a potentiometer controls a servo’s angle.</li>
+        <li>Used non-blocking timing so one microcontroller could read a sensor, drive a servo and blink an LED at the same time.</li>
+        <li>Wrote forward and inverse kinematics for a two-segment robot leg in Python (NumPy).</li>
+        <li>Linked Python to the Arduino over serial, so calculated joint angles moved a physical servo.</li>
+        <li>Simulated the leg in MuJoCo with smooth motion between target foot positions.</li>
+        <li>Debugged the simulation by logging commanded vs actual joint angles, which found a joint-limit collision and a velocity-jump twitch.</li>
+      </ul>
+
+      <h3 class="subsection-title">Phase 2 - Mujoco Simulation</h3>
+      <div class="video-grid video-grid-three">
+        <figure class="video-grid-item">
+          <video controls preload="metadata" playsinline>
+            <source src="pictures/inchworm.mp4" type="video/mp4">
+          </video>
+          <figcaption>Inchworm</figcaption>
+        </figure>
+        <figure class="video-grid-item">
+          <video controls preload="metadata" playsinline>
+            <source src="pictures/gripper_sim_1.mp4" type="video/mp4">
+          </video>
+          <figcaption>Soft gripper</figcaption>
+        </figure>
+        <figure class="video-grid-item">
+          <video controls preload="metadata" playsinline>
+            <source src="pictures/hexapod_sim.mp4" type="video/mp4">
+          </video>
+          <figcaption>Hexapod</figcaption>
+        </figure>
+      </div>
+      <ul class="subsection-list">
+        <li><strong>Hexapod (insect walking), complete:</strong> an 18-joint MuJoCo robot that walks forward steadily using the three-legs-down “tripod” gait insects use, with a three-pose leg cycle and smooth blending between poses.</li>
+        <li><strong>Soft gripper (octopus arm), complete:</strong> three springy-jointed fingers that picked up and lifted spheres of different sizes and coped with small misalignments.</li>
+        <li><strong>Inchworm crawler, complete in simulation:</strong> a 3-segment, 2-hinge body that arches like an inchworm and grips by switching each foot’s friction, with foot slip cut about ten times by tuning.</li>
+        <li><strong>Fish swimmer, in progress:</strong> a stiff body and three tail joints driven by a side-to-side ripple that grows toward the tail fin.</li>
+      </ul>
     </section>
 
     <section id="humaster" class="section">
