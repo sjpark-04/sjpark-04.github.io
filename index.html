@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <nav class="nav">
@@ -16,6 +16,7 @@
     <a href="#surgical-robots">Surgical Robots</a>
     <a href="#side-projects">Side Projects</a>
     <a href="#humaster">Humaster</a>
+    <a href="#diy-portable-speaker">DIY Portable Speaker</a>
     <a href="#mechathon">Mechathon</a>
     <a href="#uclr">UCLR</a>
     <a href="#imeche">IMechE</a>
@@ -173,6 +174,35 @@
       <p class="about-text key-skills"><strong>Key Skills:</strong> Python (pySerial, PyQt6, PyQtGraph), Serial communications</p>
     </section>
 
+    <section id="diy-portable-speaker" class="section">
+      <h2>DIY portable speaker</h2>
+      <p class="section-intro">Products are often thrown away when a single component fails, even when the fault is easy to fix. A kettle with a faulty part, for example, is usually replaced rather than repaired, because the design makes repair impractical. For Scenarios Week, our team addressed this by designing and building a small portable speaker that is repairable, recyclable, and open source. It had to be buildable by people with no design or DIY experience, and any failed component could be replaced without specialist skills. The result is a speaker that anyone can assemble, repair, and take apart for recycling, without compromising performance.</p>
+      <ul class="subsection-list">
+        <li><strong>Design:</strong> Designed out common assembly errors with keyed connectors and an asymmetric PCB mount, so parts can’t be installed the wrong way round.</li>
+        <li><strong>Manufacturing and hands-on skills:</strong> Resolved prototyping problems (print tolerances and warping, tight cable runs, hard-to-remove modules) with a 22% scale-up and redesigned module grips.</li>
+        <li><strong>Testing and analysis:</strong> Ran an ISO 178 flexural test on the 3D-printed frame, showing a ~4× safety margin over operating load with 3.3% variation across 3 samples.</li>
+        <li><strong>Planning and project management:</strong> Delivered the build for £19.81 to £33.91 against a £50 budget limit, with a full bill of materials and measurable PDS targets.</li>
+      </ul>
+      <div class="pcb-images pcb-images-2x2">
+        <figure class="pcb-image-figure">
+          <img src="pictures/speaker_cad.png" alt="Speaker CAD" class="image-contain">
+          <figcaption>Speaker CAD</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/3d_printed_parts.jpg" alt="3D printed parts" class="image-contain">
+          <figcaption>3D printed parts</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/final_product_1.jpg" alt="Final product 1" class="image-contain">
+          <figcaption>Final product 1</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/final_product_2.png" alt="Final product 2" class="image-contain">
+          <figcaption>Final product 2</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section id="mechathon" class="section">
       <h2>Mechathon</h2>
       <p class="section-intro">In January 2026, I participated in MES Mechathon, an Autodesk-powered engineering challenge where teams design and manufacture solutions within three days. The competition develops rapid prototyping skills, creative problem-solving, and teamwork under tight deadlines. This year's challenge: build a water-powered wheeled device that travels the furthest distance possible using only water propulsion.</p>
@@ -214,6 +244,16 @@
     <section id="uclr" class="section">
       <h2>UCLR (University College London Racing)</h2>
       <p class="section-intro">During my first year at UCL, I joined the UCLR Rover team as a design engineer. My role centered on redesigning and improving existing rover components to boost overall performance and efficiency.</p>
+      <div class="pcb-images">
+        <figure class="pcb-image-figure">
+          <img src="pictures/wheel_cad.png" alt="Wheel CAD" class="image-contain">
+          <figcaption>Wheel CAD</figcaption>
+        </figure>
+        <figure class="pcb-image-figure">
+          <img src="pictures/battery_box_cad.png" alt="Battery box CAD" class="image-contain">
+          <figcaption>Battery box CAD</figcaption>
+        </figure>
+      </div>
       <ul class="subsection-list">
         <li>Reduced rover wheel mass by 15.7% by redesigning the inflatable tire as a 3D-printable airless tire, validated through FEA simulations to meet full-load structural requirements.</li>
         <li>Designed rail-mounted battery enclosures tailored to the redesigned rover frame, enhancing power system protection and reliability in harsh operating conditions.</li>
