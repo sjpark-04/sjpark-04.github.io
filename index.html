@@ -7,7 +7,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.v6.css">
+  <style>
+    /* Force Phase 1 videos into one row (cache-safe) */
+    .video-grid-four { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 1rem 0.75rem; width: 100%; }
+    .video-grid-four .video-grid-item { min-width: 0; max-width: 100%; }
+    .video-grid-four video { width: 100%; max-width: 100%; height: 180px; max-height: 180px; object-fit: contain; }
+    @media (max-width: 520px) {
+      .video-grid-four { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    }
+  </style>
 </head>
 <body>
   <nav class="nav">
